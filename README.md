@@ -1,1 +1,1 @@
-# FocusFrame
+FocusFrame Detector is a computer vision project that utilizes YOLO (You Only Look Once) for object detection and CLIP (Contrastive Language-Image Pretraining) for text-based recognition. The project aims to recognize specific scenarios involving people, such as studying, using a phone, reading, holding a drink, etc.

@@ -1,0 +1,32 @@
+model:
+  type: "YOLOv8"
+  pretrained: "yolov8n.pt"
+  input_size: [640, 640]
+  num_classes: 3 
+
+data:
+  train: "../data/processed/train"
+  val: "../data/processed/val"
+  test: "../data/processed/test"
+
+hyperparameters:
+  learning_rate: 0.001
+  batch_size: 16
+  epochs: 50
+  weight_decay: 0.0005
+  momentum: 0.9
+
+augmentation:
+  flip: true
+  rotation: 10
+  scale: [0.8, 1.2]
+  color_jitter: true
+
+callbacks:
+  save_best_model: true
+  early_stopping: true
+
+scenarios:
+  - "A person holding a drink"
+  - "A person on their phone"
+  - "A person looking at their watch"

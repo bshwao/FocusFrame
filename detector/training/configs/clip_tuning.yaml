@@ -1,0 +1,19 @@
+# Configuration file for fine-tuning CLIP on the FocusFrame dataset
+model: clip
+optimizer: Adam
+learning_rate: 5e-5 # Adjust based on convergence and overfitting
+batch_size: 32 # Adjust based on GPU memory
+num_epochs: 10 # Adjust based on convergence and overfitting
+train_data_path: ../../data/processed/train
+val_data_path: ../../data/processed/val
+image_size: 224
+text_prompts:
+  - "A person holding a drink"
+  - "A person on their phone"
+  - "A person looking at their watch"
+  - "A person studying"
+  - "A person reading a book or textbook"
+output_dir: ../../models/clip_finetune
+logging_steps: 10 
+save_steps: 500
+evaluation_steps: 1000

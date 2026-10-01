@@ -1,0 +1,27 @@
+model:
+  name: "yolov8n.pt"
+  confidence_threshold: 0.5
+  device: "auto"
+
+clip:
+  model_name: "ViT-B/32"
+  device: "auto"
+
+prompts:
+  - "A person studying"
+  - "A person on their phone"
+  - "A person reading a book or textbook"
+  - "A person holding a drink"
+  - "A person looking at their watch"
+
+video:
+  source: 0
+  width: 640
+  height: 480
+  fps: 60
+
+inference:
+  max_frames: 1000
+  display: true
+  save_results: false
+  output_path: "results/"
